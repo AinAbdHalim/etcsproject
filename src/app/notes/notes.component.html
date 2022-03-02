@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<br> 
+
+<div class="inputContainer">
+    <form [formGroup]="noteForm">
+      <input class="input" formControlName="note"
+             placeholder="Enter New Note"
+             type="text"/>
+      <button [disabled]="noteForm.invalid" (click)="addNote()" class="btn add-task-btn">Add note</button>
+    </form>
+  </div>
+  
+  <br>
+  <ul *ngFor="let item of list">
+    <li>
+      {{item.name}}
+      <button class="trash-icon" (click)="removeNote(item.id)">
+        <i nz-icon nzType="delete" nzTheme="outline"></i>
+      </button>
+    </li>
+  </ul>

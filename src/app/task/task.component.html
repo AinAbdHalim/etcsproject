@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<br>
+
+<div class="inputContainer">
+  <form [formGroup]="todoForm">
+    <input class="input" formControlName="todo"
+           placeholder="Enter New Task"
+           type="text"/>
+    <button [disabled]="todoForm.invalid" (click)="addTask()" class="btn add-task-btn">Add task</button>
+  </form>
+</div>
+
+<br>
+<ul *ngFor="let item of list">
+  <li>
+    <nz-card  nzTitle="" >{{item.name}}</nz-card>
+  <button class="trash-icon" (click)="removeTask(item.id)">
+      <i nz-icon nzType="delete" nzTheme="outline"></i>
+    </button>
+  </li>
+</ul>
