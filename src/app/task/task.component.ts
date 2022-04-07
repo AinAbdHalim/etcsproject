@@ -8,6 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class TaskComponent implements OnInit {
 
+  today: number = Date.now();
+
   list: any[] = []
 
   todoForm: FormGroup = this.fb.group({

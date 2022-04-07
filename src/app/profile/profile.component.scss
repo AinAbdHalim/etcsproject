@@ -2,16 +2,23 @@ body{
     margin-top:20px;
     color: #1a202c;
     text-align: left;
-    background-color: #e2e8f080;    
+    background-color: #e2e8f080;  
+      
 }
 .main-body {
     padding: 15px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: auto;
+    /*border: 3px solid green;*/
 }
 .card {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
 }
 
 .card {
+
     position: relative;
     display: flex;
     flex-direction: column;
@@ -40,6 +47,8 @@ body{
 }
 .mb-3, .my-3 {
     margin-bottom: 1rem!important;
+    top: -40px;
+    width: 150%;
 }
 
 .bg-gray-300 {
@@ -55,4 +64,35 @@ body{
 .nz-avatar {
     margin-left: auto;
     margin-right: auto;
+}
+
+.row {
+    margin-bottom: 50px;
+    align-items: stretch;
+}
+
+.p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.clock-in {
+    position: absolute;
+    border-radius: 5px;
+    width: 120px;
+    height: 100px;
+    left: 100px;
+
+}
+
+.clock-out {
+    position: absolute;
+    border-radius: 5px;
+    width: 120px;
+    height: 100px;
+    padding-left: 20px;
+    right: 100px;
+}
+
+.btn-display {
+    margin-right: 50px;
 }

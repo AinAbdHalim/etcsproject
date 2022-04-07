@@ -2,6 +2,15 @@ h1 {
     font-family: Bahnschrift SemiBold,Bahnschrift SemiBold;
     text-align: center;
     color: rgb(0, 0, 0);
+    padding-top: 15px;
+  }
+
+  h2 {
+      font-family: cursive;
+      font-size: xx-large;
+      text-align: center;
+      color: rgb(177, 41, 41);
+      padding-top: 25px;
   }
         
         
@@ -13,10 +22,11 @@ h1 {
           text-align: center;
           width: 400px;
           margin: auto;
+          bottom: -100px;
         }
   
         .login-form-margin {
-          margin-bottom: 16px;
+          margin-bottom: 30px;
         }
   
         .login-form-forgot {

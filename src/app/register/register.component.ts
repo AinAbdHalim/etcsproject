@@ -10,62 +10,62 @@ import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
-  // validateForm!: FormGroup;
-  // captchaTooltipIcon: NzFormTooltipIcon = {
-  //   type: 'info-circle',
-  //   theme: 'twotone'
-  // };
+//   validateForm!: FormGroup;
+//   captchaTooltipIcon: NzFormTooltipIcon = {
+//     type: 'info-circle',
+//     theme: 'twotone'
+//   };
 
-  // submitForm(): void {
-  //   console.log("submit", this.validateForm.value)
-  //   if (this.validateForm.valid) {
-  //     this.router.navigateByUrl("/login")
-  //   } else {
-  //     Object.values(this.validateForm.controls).forEach(control => {
-  //       if (control.invalid) {
-  //         control.markAsDirty();
-  //         control.updateValueAndValidity({ onlySelf: true });
-  //       }
-  //     });
-  //   }
-  // }
+//   submitForm(): void {
+//     console.log("submit", this.validateForm.value)
+//     if (this.validateForm.valid) {
+//       this.router.navigateByUrl("/login")
+//     } else {
+//       Object.values(this.validateForm.controls).forEach(control => {
+//         if (control.invalid) {
+//           control.markAsDirty();
+//           control.updateValueAndValidity({ onlySelf: true });
+//         }
+//       });
+//     }
+//   }
 
-  // updateConfirmValidator(): void {
-  //   /** wait for refresh value */
-  //   Promise.resolve().then(() => this.validateForm.controls.checkPassword.updateValueAndValidity());
-  // }
+//   updateConfirmValidator(): void {
+//     /** wait for refresh value */
+//     Promise.resolve().then(() => this.validateForm.controls.checkPassword.updateValueAndValidity());
+//   }
 
-  // confirmationValidator = (control: FormControl): { [s: string]: boolean } => {
-  //   if (!control.value) {
-  //     return { required: true };
-  //   } else if (control.value !== this.validateForm.controls.password.value) {
-  //     return { confirm: true, error: true };
-  //   }
-  //   return {};
-  // };
+//   confirmationValidator = (control: FormControl): { [s: string]: boolean } => {
+//     if (!control.value) {
+//       return { required: true };
+//     } else if (control.value !== this.validateForm.controls.password.value) {
+//       return { confirm: true, error: true };
+//     }
+//     return {};
+//   };
 
-  // getCaptcha(e: MouseEvent): void {
-  //   e.preventDefault();
-  // }
+//   getCaptcha(e: MouseEvent): void {
+//     e.preventDefault();
+//   }
 
+//   constructor(private fb: FormBuilder, private router:Router) {}
 
-
-
-   constructor(private fb: FormBuilder, private router:Router) { }
-
-   ngOnInit(): void {
-  //   this.validateForm = this.fb.group({
-  //     email: [null, [Validators.email, Validators.required]],
-  //     password: [null, [Validators.required]],
-  //     checkPassword: [null, [Validators.required, this.confirmationValidator]],
-  //     nickname: [null, [Validators.required]],
-  //     phoneNumberPrefix: ['+86'],
-  //     phoneNumber: [null, [Validators.required]],
-  //     website: [null, [Validators.required]],
-  //     // captcha: [null, [Validators.required]],
-  //     agree: [false]
-  //   });
-   }
-
+//   ngOnInit(): void {
+//     this.validateForm = this.fb.group({
+//       email: [null, [Validators.email, Validators.required]],
+//       password: [null, [Validators.required]],
+//       checkPassword: [null, [Validators.required, this.confirmationValidator]],
+//       nickname: [null, [Validators.required]],
+//       phoneNumberPrefix: ['+86'],
+//       phoneNumber: [null, [Validators.required]],
+//       website: [null, [Validators.required]],
+//       // captcha: [null, [Validators.required]],
+//       agree: [false]
+//     });
+//   }
+// }
 }

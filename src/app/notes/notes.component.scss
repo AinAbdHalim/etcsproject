@@ -17,6 +17,12 @@ div {
     padding-left: 41%;
     font-size: larger;
   }
+
+  li {
+    width: 70%;
+    position: relative;
+    padding-left: 30%;
+  }
   
   .input {
     padding: 8px;
@@ -37,4 +43,10 @@ div {
       opacity: 1;
     }
     transition: color ease-in 500ms;
+    position: relative;
+    padding-left: 97%;
+  }
+
+  .item-list {
+    right: auto;
   }

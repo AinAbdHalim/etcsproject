@@ -17,6 +17,8 @@ export class NotesComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
+  
+
   addNote() {
     this.list.push({id: this.list.length, name: this.noteForm.value.note})
     this.updateStorage()

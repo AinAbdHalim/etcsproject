@@ -16,6 +16,13 @@ div {
   ul {
     padding-left: 41%;
     font-size: larger;
+    
+  }
+
+  li {
+    width: 70%;
+    position: relative;
+    padding-left: 30%;
   }
   
   .input {
@@ -37,11 +44,15 @@ div {
       opacity: 1;
     }
     transition: color ease-in 500ms;
+    position: relative;
+    padding-left: 97%;
   }
 
   .nz-card {
+    margin: 50%;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 50px;
     border-width: 0;
-    width: 300px;
+    width: 100px;
+    height: 200px;
   }

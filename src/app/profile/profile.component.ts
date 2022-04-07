@@ -1,15 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {FormBuilder} from '@angular/forms'
+import { HttpClient } from '@angular/common/http';
+import { UsersService } from '../users.service';
+import { ActivatedRoute } from '@angular/router';
+import { FormGroup, FormControl } from '@angular/forms';
 
 
+export class profiles {
+  constructor(
+    public id: string,
+    public name: string,
+    public email: string,
+    public phone: string,
+    public department: string,
+    public address: string
+  ) {
+  }
+}
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
+ // addEditProfileForm : FormGroup;
+
+  today: number = Date.now();
+
+  //profiles = profile[];
+  
   loading = false;
   avatarUrl?: string;
 
@@ -17,6 +38,8 @@ export class ProfileComponent implements OnInit {
   
   isVisible = false;
   isOkLoading = false;
+  profile: any;
+  
  
 
   showModal(): void {
@@ -36,8 +59,11 @@ export class ProfileComponent implements OnInit {
   }
 
   //
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,
+    private user:UsersService,
+    private router: ActivatedRoute) { }
     form = this.fb.group({
+      id: [],
       fullName: [],
       email: [],
       phoneNum: [],
@@ -45,22 +71,14 @@ export class ProfileComponent implements OnInit {
       address: [],
     })
 
+    
+
     clockIn(): void {
       this.isVisible = true;
     }
   
-    handleSave(): void {
-      console.log('Button ok clicked!');
-      this.isVisible = false;
-    }
-  
-    handleCancell(): void {
-      console.log('Button cancel clicked!');
-      this.isVisible = false;
-    }
- 
 
- 
+    
   //constructor(private modalService: NgbModal)
   
   // open(content: any) {
@@ -83,10 +101,27 @@ export class ProfileComponent implements OnInit {
   //   }
   // }
 
+  // updateUser=new FormGroup(
+  //   fullname: new FormControl(''),
+  //   email: new FormControl(''),
+  //   phone: new FormControl(''),
+  //   department: new FormControl(''),
+  //   address: new FormControl ('')
+  // )
   
-  
+  userData:any=[];
 
   ngOnInit(): void {
+   this.user.getAllUsers().subscribe((allData)=>{
+     console.log(allData);
+     this.userData=allData;
+       })
+
+    //console.log(this.router.snapshot.params.id);
+
+    
   }
+
+  
 
 }
